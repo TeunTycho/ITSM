@@ -1,7 +1,7 @@
 name: Generate Incident Report
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "5 17 * * *"
 
 jobs:
   generate-report:
@@ -21,7 +21,7 @@ jobs:
       - name: Fetch incident issues
         run: |
           # Replace "your-username" and "your-repo" with your GitHub username and repository name
-          owner="Teuntycho"
+          owner="TeunTycho"
           repo="ITSM"
           label="incident"
           url="https://api.github.com/repos/$owner/$repo/issues?labels=$label"
